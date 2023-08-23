@@ -8,8 +8,7 @@
     <li>
       <label for="medium">Medium</label>
       <select name="medium" id="medium" formControlName="medium">
-        <option value="Movies">Movies</option>
-        <option value="Series">Series</option>
+        <option *ngFor="let medium of lookupLists.mediums" [value]="medium">{{ medium }}</option>
       </select>
     </li>
     <li>
@@ -21,7 +20,7 @@
     </li>
     <li>
       <label for="category">Category</label>
-      <select name="category" id="category" formControlName="category"> 
+      <select name="category" id="category" formControlName="category">
         <option value="Action">Action</option>
         <option value="Science Fiction">Science Fiction</option>
         <option value="Comedy">Comedy</option>
